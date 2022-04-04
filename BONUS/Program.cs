@@ -29,9 +29,11 @@ namespace BONUS
             Console.Write("Valutazione numero recensioni: ");
             int numeroRecensioni = Convert.ToInt32(Console.ReadLine());
             Console.Write("Versione Kindle (Si o No): ");
-            string versioneKindle = Console.ReadLine();
+            string versioneKindle = Console.ReadLine().ToUpper();
             Console.Write("Copertina flessibile (Si o No): ");
-            string copertinaFlessibile = Console.ReadLine();
+            string copertinaFlessibile = Console.ReadLine().ToUpper();
+
+          
 
 
             //Print informazioni acquisite
@@ -45,8 +47,30 @@ namespace BONUS
             Console.WriteLine("Informazioni Amazon:");
             Console.WriteLine("Numero di recensioni: " + numeroRecensioni + " recensioni");
             Console.WriteLine("Valutazione media: " + valutazioneMedia + "☆");
-            Console.WriteLine("Kindle disponibile: " + versioneKindle);
-            Console.WriteLine("Copertina flessibile disponibile: " + copertinaFlessibile);
+            if (versioneKindle == "SI")
+            {
+                Console.WriteLine("Kindle disponibile: Si");
+            } else if (versioneKindle == "NO")
+            {
+                Console.WriteLine("Kindle disponibile: No");
+            }else
+            {
+                Console.WriteLine("Non hai inserito valore accettato");
+            }
+
+            if (copertinaFlessibile == "SI")
+            {
+                Console.WriteLine("Copertina flessibile disponibile: Si");
+            }
+            else if (copertinaFlessibile == "NO")
+            {
+                Console.WriteLine("Copertina flessibile disponibile: No");
+            }
+            else
+            {
+                Console.WriteLine("Non hai inserito valore accettato");
+            }
+            
         }
     }
 }
