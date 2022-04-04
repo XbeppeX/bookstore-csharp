@@ -6,6 +6,7 @@ namespace BookStoreCsharp
     {
         static void Main(string[] args)
         {
+            //Definizione variabili
             string titolo = "Clean Code";
             string autore = "Robert C. “Uncle Bob” Martin";
             long isbn = 9780132350884;
@@ -19,6 +20,7 @@ namespace BookStoreCsharp
             string versioneKindle = "Si";
             string copertinaFlessibile = "Si";
 
+            //Print informazioni acquisite
             Console.WriteLine("Il libro di oggi: " + titolo + " di " + autore);
             Console.WriteLine("Informazioni generiche:");
             Console.WriteLine("ISBN: " + isbn);
